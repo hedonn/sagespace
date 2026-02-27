@@ -66,6 +66,13 @@ export default function BookingPage() {
     }
   }
 
+  const scrollToLocationHours = () => {
+    const section = document.getElementById("location-hours")
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError(null)
@@ -348,34 +355,6 @@ export default function BookingPage() {
                     </ol>
                   </div>
 
-                  <div className="rounded-2xl border border-border bg-card p-6 space-y-4 text-sm text-muted-foreground">
-                    <h3 className="font-serif text-base font-semibold text-foreground">Location & Business Hours</h3>
-                    <div>
-                      <p className="font-medium text-foreground">Sage The Space</p>
-                      <p>Walnut Creek, CA</p>
-                      <p className="mt-1">Sessions available in-person and remotely worldwide.</p>
-                    </div>
-                    <div className="pt-2 border-t border-border/60 space-y-1">
-                      <p className="font-medium text-foreground">Business Hours</p>
-                      <div className="grid grid-cols-[auto,1fr] gap-x-4 gap-y-1">
-                        <span className="text-foreground">Sunday</span>
-                        <span>Closed</span>
-                        <span className="text-foreground">Monday</span>
-                        <span>Closed</span>
-                        <span className="text-foreground">Tuesday</span>
-                        <span>9:30 AM – 4:00 PM</span>
-                        <span className="text-foreground">Wednesday</span>
-                        <span>9:30 AM – 4:00 PM</span>
-                        <span className="text-foreground">Thursday</span>
-                        <span>9:30 AM – 4:00 PM</span>
-                        <span className="text-foreground">Friday</span>
-                        <span>9:30 AM – 4:00 PM</span>
-                        <span className="text-foreground">Saturday</span>
-                        <span>9:00 AM – 2:00 PM</span>
-                      </div>
-                    </div>
-                  </div>
-
                   <div className="rounded-2xl border border-border bg-card p-6 space-y-3 text-sm text-muted-foreground">
                     <h3 className="font-serif text-base font-semibold text-foreground">Client Experiences</h3>
                     <p className="italic text-foreground">
@@ -389,9 +368,65 @@ export default function BookingPage() {
                     </p>
                     <p className="text-xs text-muted-foreground">— Michael R., Space Clearing client</p>
                   </div>
+
+                  <button
+                    type="button"
+                    onClick={scrollToLocationHours}
+                    className="w-full rounded-full border border-border bg-background px-4 py-2.5 text-sm font-medium text-foreground hover:border-primary/40 hover:bg-primary/5 transition-colors"
+                  >
+                    View location &amp; business hours
+                  </button>
                 </aside>
               </FadeIn>
             </div>
+          </div>
+        </section>
+
+        {/* Location & Hours */}
+        <section id="location-hours" className="py-12 lg:py-16 border-t border-border bg-muted/40">
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <FadeIn>
+              <div className="grid gap-8 lg:grid-cols-2 items-start">
+                <div className="space-y-3">
+                  <p className="text-sm font-semibold uppercase tracking-[0.15em] text-primary">
+                    Visit or meet remotely
+                  </p>
+                  <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-foreground">
+                    Location &amp; Business Hours
+                  </h2>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                    Sessions are offered in a calm, private space in Walnut Creek, CA, as well as remotely for clients
+                    around the world. After you request a booking, I&apos;ll confirm your time based on the hours below.
+                  </p>
+                  <div className="mt-4 rounded-2xl border border-border bg-card p-4 text-sm text-muted-foreground space-y-1.5">
+                    <p className="font-medium text-foreground">Sage The Space</p>
+                    <p>Walnut Creek, CA</p>
+                    <p>In-person and distance sessions available.</p>
+                  </div>
+                </div>
+                <div>
+                  <div className="rounded-2xl border border-border bg-card p-5 text-sm text-muted-foreground">
+                    <p className="font-medium text-foreground mb-3">Business Hours</p>
+                    <div className="grid grid-cols-[auto,1fr] gap-x-4 gap-y-1.5">
+                      <span className="text-foreground">Sunday</span>
+                      <span>Closed</span>
+                      <span className="text-foreground">Monday</span>
+                      <span>Closed</span>
+                      <span className="text-foreground">Tuesday</span>
+                      <span>9:30 AM – 4:00 PM</span>
+                      <span className="text-foreground">Wednesday</span>
+                      <span>9:30 AM – 4:00 PM</span>
+                      <span className="text-foreground">Thursday</span>
+                      <span>9:30 AM – 4:00 PM</span>
+                      <span className="text-foreground">Friday</span>
+                      <span>9:30 AM – 4:00 PM</span>
+                      <span className="text-foreground">Saturday</span>
+                      <span>9:00 AM – 2:00 PM</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </section>
       </main>
