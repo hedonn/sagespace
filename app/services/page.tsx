@@ -175,7 +175,7 @@ export default function ServicesPage() {
                           </ul>
 
                           <Button className="mt-6 w-full rounded-full" asChild>
-                            <Link href="https://www.vagaro.com/sagethespace" target="_blank" rel="noopener noreferrer">
+                            <Link href="/booking">
                               Book This Service
                               <ArrowRight className="ml-2 h-4 w-4" />
                             </Link>

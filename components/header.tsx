@@ -65,7 +65,7 @@ export function Header() {
             </Link>
           ))}
           <Button asChild size="sm" className="ml-3 rounded-full shadow-sm shadow-primary/15">
-            <Link href="https://www.vagaro.com/sagethespace" target="_blank" rel="noopener noreferrer">
+            <Link href="/booking">
               Book Now
             </Link>
           </Button>
@@ -110,9 +110,7 @@ export function Header() {
           <div className="pt-4">
             <Button asChild className="w-full rounded-full">
               <Link 
-                href="https://www.vagaro.com/sagethespace" 
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="/booking"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Book Now

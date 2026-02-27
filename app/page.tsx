@@ -93,7 +93,7 @@ export default function HomePage() {
                 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <MagneticButton>
                     <Button size="lg" className="h-13 px-8 text-base rounded-full shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/25 transition-all" asChild>
-                      <Link href="https://www.vagaro.com/sagethespace" target="_blank" rel="noopener noreferrer">
+                      <Link href="/booking">
                         Book a Session
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </Link>
@@ -282,7 +282,7 @@ export default function HomePage() {
                 <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <MagneticButton>
                     <Button size="lg" variant="secondary" className="h-13 px-8 text-base rounded-full shadow-lg" asChild>
-                      <Link href="https://www.vagaro.com/sagethespace" target="_blank" rel="noopener noreferrer">
+                      <Link href="/booking">
                         Book a Session
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </Link>
