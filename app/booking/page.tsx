@@ -134,16 +134,35 @@ export default function BookingPage() {
         </section>
 
         {/* Booking form */}
-        <section id="booking-details" className="py-12 lg:py-16">
+        <section id="booking-details" className="py-10 lg:py-14">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <div className="grid gap-12 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:gap-16 items-start">
+            <div className="grid gap-10 lg:grid-cols-[minmax(0,3.2fr)_minmax(0,2fr)] lg:gap-16 items-start">
               <FadeIn>
-                <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 shadow-sm">
-                  <h2 className="font-serif text-xl sm:text-2xl font-semibold text-foreground">Booking Details</h2>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    I will review your request and add it to my calendar if the time works. You&apos;ll receive a
-                    follow-up email to confirm your appointment and share any preparation tips.
-                  </p>
+                <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 shadow-md shadow-primary/5">
+                  <div className="flex flex-col gap-3 sm:gap-4">
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                      <div>
+                        <h2 className="font-serif text-xl sm:text-2xl font-semibold text-foreground">
+                          Booking Details
+                        </h2>
+                        <p className="mt-1 text-xs sm:text-sm text-muted-foreground max-w-xl">
+                          Share your details and preferred timing. I&apos;ll review your request, add it to my calendar
+                          if it fits, and email you to confirm with preparation tips.
+                        </p>
+                      </div>
+                      <div className="hidden sm:flex items-center gap-2 text-xs text-muted-foreground">
+                        <span className="inline-flex h-7 items-center rounded-full bg-primary/5 px-3 font-medium text-primary border border-primary/15">
+                          1. Details
+                        </span>
+                        <span className="inline-flex h-7 items-center rounded-full bg-muted px-3 border border-border text-foreground/70">
+                          2. Session type
+                        </span>
+                        <span className="inline-flex h-7 items-center rounded-full bg-muted px-3 border border-border text-foreground/70">
+                          3. Confirm
+                        </span>
+                      </div>
+                    </div>
+                  </div>
 
                   {isSubmitted ? (
                     <div className="mt-8 text-center py-10">
@@ -169,7 +188,7 @@ export default function BookingPage() {
                       </Button>
                     </div>
                   ) : (
-                    <form onSubmit={handleSubmit} className="mt-6 space-y-5">
+                    <form onSubmit={handleSubmit} className="mt-6 space-y-6">
                       <div className="grid gap-5 sm:grid-cols-2">
                         <div>
                           <Label htmlFor="name" className="text-foreground text-sm">
@@ -324,7 +343,7 @@ export default function BookingPage() {
                         className="w-full h-12 rounded-full text-base shadow-md shadow-primary/15"
                         disabled={isSubmitting}
                       >
-                        {isSubmitting ? "Sending..." : "Submit booking request"}
+                        {isSubmitting ? "Sending..." : "Send booking request"}
                       </Button>
                     </form>
                   )}
@@ -332,20 +351,7 @@ export default function BookingPage() {
               </FadeIn>
 
               <FadeIn delay={150}>
-                <aside className="space-y-6">
-                  <div className="rounded-2xl border border-border bg-muted/40 p-6">
-                    <h3 className="font-serif text-lg font-semibold text-foreground">Prefer to book instantly?</h3>
-                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                      You can also choose your service and time directly through my Vagaro booking page.
-                    </p>
-                    <Button className="mt-4 w-full rounded-full" asChild>
-                      <Link href="https://www.vagaro.com/sagethespace" target="_blank" rel="noopener noreferrer">
-                        Book on Vagaro
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </div>
-
+                <aside className="space-y-5">
                   <div className="rounded-2xl border border-border bg-card p-6 space-y-3 text-sm text-muted-foreground">
                     <h3 className="font-serif text-base font-semibold text-foreground">What happens next</h3>
                     <ol className="list-decimal list-inside space-y-1.5">
@@ -376,6 +382,19 @@ export default function BookingPage() {
                   >
                     View location &amp; business hours
                   </button>
+
+                  <div className="rounded-2xl border border-border bg-muted/40 p-6">
+                    <h3 className="font-serif text-lg font-semibold text-foreground">Prefer to book instantly?</h3>
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                      You can also choose your service and time directly through my Vagaro booking page.
+                    </p>
+                    <Button className="mt-4 w-full rounded-full" asChild>
+                      <Link href="https://www.vagaro.com/sagethespace" target="_blank" rel="noopener noreferrer">
+                        Book on Vagaro
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
                 </aside>
               </FadeIn>
             </div>
