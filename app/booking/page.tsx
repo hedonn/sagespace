@@ -51,15 +51,32 @@ const formatMailtoBody = (state: typeof initialState) => {
 export default function BookingPage() {
   const [formState, setFormState] = useState(initialState)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setError(null)
+    setIsSubmitting(true)
 
-    const subject = encodeURIComponent("New booking request from Sage The Space website")
-    const body = formatMailtoBody(formState)
+    try {
+      const response = await fetch("/api/bookings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formState),
+      })
 
-    window.location.href = `mailto:hello@sagethespace.com?subject=${subject}&body=${body}`
-    setIsSubmitted(true)
+      if (!response.ok) {
+        const data = await response.json().catch(() => null)
+        throw new Error(data?.error || "Unable to submit booking right now.")
+      }
+
+      setIsSubmitted(true)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -100,8 +117,8 @@ export default function BookingPage() {
                 <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 shadow-sm">
                   <h2 className="font-serif text-xl sm:text-2xl font-semibold text-foreground">Booking Details</h2>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    I will review your request personally and respond by email to confirm your appointment and share
-                    next steps.
+                    I will review your request personally and add it to my calendar. You&apos;ll receive a follow-up
+                    email to confirm your appointment and share next steps.
                   </p>
 
                   {isSubmitted ? (
@@ -113,8 +130,8 @@ export default function BookingPage() {
                         Thank you for your request
                       </h3>
                       <p className="mt-2 text-muted-foreground">
-                        Your email to hello@sagethespace.com should be open. Once you send it, I will be in touch soon
-                        to confirm your booking.
+                        Your request has been sent. Your session details have been added to my calendar, and I will be
+                        in touch soon to confirm your booking.
                       </p>
                       <Button
                         variant="outline"
@@ -269,14 +286,19 @@ export default function BookingPage() {
                         />
                       </div>
 
-                      <Button type="submit" className="w-full h-12 rounded-full text-base shadow-md shadow-primary/15">
-                        Submit booking request
-                      </Button>
+                      {error && (
+                        <p className="text-sm text-red-500 bg-red-50 border border-red-100 rounded-xl px-3 py-2">
+                          {error}
+                        </p>
+                      )}
 
-                      <p className="text-xs text-muted-foreground mt-2">
-                        When you click submit, your email app will open with your details pre-filled so you can send
-                        your request directly.
-                      </p>
+                      <Button
+                        type="submit"
+                        className="w-full h-12 rounded-full text-base shadow-md shadow-primary/15"
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? "Sending..." : "Submit booking request"}
+                      </Button>
                     </form>
                   )}
                 </div>
