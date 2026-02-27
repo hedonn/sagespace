@@ -59,6 +59,13 @@ export default function BookingPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
+  const scrollToBookingDetails = () => {
+    const section = document.getElementById("booking-details")
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError(null)
@@ -98,10 +105,14 @@ export default function BookingPage() {
           <div className="relative mx-auto max-w-4xl px-6 lg:px-8">
             <BlurIn>
               <div className="mx-auto max-w-2xl text-center">
-                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20">
+                <button
+                  type="button"
+                  onClick={scrollToBookingDetails}
+                  className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20 hover:bg-primary/15 hover:border-primary/40 transition-colors"
+                >
                   <Sparkles className="h-4 w-4" />
                   Energy Healing &amp; Space Clearing
-                </div>
+                </button>
                 <h1 className="mt-4 font-serif text-4xl sm:text-5xl font-semibold text-foreground text-balance">
                   Book Your Healing Session
                 </h1>
@@ -116,7 +127,7 @@ export default function BookingPage() {
         </section>
 
         {/* Booking form */}
-        <section className="py-12 lg:py-16">
+        <section id="booking-details" className="py-12 lg:py-16">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:gap-16 items-start">
               <FadeIn>
