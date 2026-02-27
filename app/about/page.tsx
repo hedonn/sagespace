@@ -56,9 +56,18 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <BlurIn>
                 <div>
-                  <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const section = document.getElementById("about-story")
+                      if (section) {
+                        section.scrollIntoView({ behavior: "smooth", block: "start" })
+                      }
+                    }}
+                    className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20 hover:bg-primary/15 hover:border-primary/40 transition-colors"
+                  >
                     About Me
-                  </div>
+                  </button>
                   <h1 className="mt-6 font-serif text-4xl sm:text-5xl font-semibold text-foreground leading-tight text-balance">
                     Guiding You Toward Balance & Renewal
                   </h1>
@@ -99,7 +108,7 @@ export default function AboutPage() {
         </section>
 
         {/* Story Section */}
-        <section className="py-20 lg:py-24 bg-card/50">
+        <section id="about-story" className="py-20 lg:py-24 bg-card/50">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
               <FadeIn>

@@ -67,10 +67,19 @@ export default function HomePage() {
           <div className="relative mx-auto max-w-6xl px-6 py-20 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <BlurIn>
-                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20">
+                <button
+                  type="button"
+                  onClick={() => {
+                    const section = document.getElementById("home-services")
+                    if (section) {
+                      section.scrollIntoView({ behavior: "smooth", block: "start" })
+                    }
+                  }}
+                  className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20 hover:bg-primary/15 hover:border-primary/40 transition-colors"
+                >
                   <Leaf className="h-4 w-4" />
                   Walnut Creek, California
-                </div>
+                </button>
               </BlurIn>
 
               <BlurIn delay={100}>
@@ -130,7 +139,7 @@ export default function HomePage() {
         </section>
 
         {/* Features Section */}
-        <section className="py-24 lg:py-32">
+        <section id="home-services" className="py-24 lg:py-32">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <FadeIn>
               <div className="mx-auto max-w-2xl text-center">

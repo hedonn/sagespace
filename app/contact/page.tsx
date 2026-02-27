@@ -58,6 +58,13 @@ export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
+  const scrollToContactDetails = () => {
+    const section = document.getElementById("contact-details")
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -80,9 +87,13 @@ export default function ContactPage() {
           <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
             <BlurIn>
               <div className="mx-auto max-w-2xl text-center">
-                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20">
+                <button
+                  type="button"
+                  onClick={scrollToContactDetails}
+                  className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20 hover:bg-primary/15 hover:border-primary/40 transition-colors"
+                >
                   Get in Touch
-                </div>
+                </button>
                 <h1 className="mt-6 font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-foreground text-balance">
                   Let&apos;s Connect
                 </h1>
@@ -96,7 +107,7 @@ export default function ContactPage() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-12 lg:py-16">
+        <section id="contact-details" className="py-12 lg:py-16">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
               {/* Contact Info */}
