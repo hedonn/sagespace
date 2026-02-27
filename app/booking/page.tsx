@@ -347,6 +347,33 @@ export default function BookingPage() {
                       <li>I email you back to confirm your session and share any preparation tips.</li>
                     </ol>
                   </div>
+
+                  <div className="rounded-2xl border border-border bg-card p-6 space-y-4 text-sm text-muted-foreground">
+                    <h3 className="font-serif text-base font-semibold text-foreground">Location & Hours</h3>
+                    <div>
+                      <p className="font-medium text-foreground">Sage The Space</p>
+                      <p>Walnut Creek, CA</p>
+                      <p className="mt-1">Sessions available in-person and remotely worldwide.</p>
+                    </div>
+                    <div className="pt-2 border-t border-border/60">
+                      <p className="font-medium text-foreground">Business Hours</p>
+                      <p>Monday – Saturday · By appointment</p>
+                    </div>
+                  </div>
+
+                  <div className="rounded-2xl border border-border bg-card p-6 space-y-3 text-sm text-muted-foreground">
+                    <h3 className="font-serif text-base font-semibold text-foreground">Client Experiences</h3>
+                    <p className="italic text-foreground">
+                      “The session was truly transformative. I left feeling lighter, clearer, and more connected to
+                      myself than I have in years.”
+                    </p>
+                    <p className="text-xs text-muted-foreground">— Sarah M., Energy Healing client</p>
+                    <p className="italic text-foreground">
+                      “After the space clearing, my home feels completely different. There is a peace and calm that was
+                      not there before.”
+                    </p>
+                    <p className="text-xs text-muted-foreground">— Michael R., Space Clearing client</p>
+                  </div>
                 </aside>
               </FadeIn>
             </div>
