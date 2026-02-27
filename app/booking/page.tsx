@@ -90,22 +90,22 @@ export default function BookingPage() {
 
       <main className="flex-1 pt-20">
         {/* Hero */}
-        <section className="relative py-20 lg:py-28 overflow-hidden">
+        <section className="relative py-10 lg:py-14 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-muted/60 via-background to-background" />
           <div className="absolute top-20 right-[15%] w-64 h-64 bg-primary/8 rounded-full blur-3xl" />
           <div className="absolute bottom-10 left-[10%] w-72 h-72 bg-accent/8 rounded-full blur-3xl" />
 
-          <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="relative mx-auto max-w-4xl px-6 lg:px-8">
             <BlurIn>
               <div className="mx-auto max-w-2xl text-center">
                 <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20">
                   <Sparkles className="h-4 w-4" />
                   Energy Healing &amp; Space Clearing
                 </div>
-                <h1 className="mt-6 font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-foreground text-balance">
+                <h1 className="mt-4 font-serif text-4xl sm:text-5xl font-semibold text-foreground text-balance">
                   Book Your Healing Session
                 </h1>
-                <p className="mt-6 text-lg sm:text-xl text-muted-foreground leading-relaxed">
+                <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed">
                   Share a few details about the support you&apos;re looking for, and I will follow up personally to
                   confirm your time and answer any questions. Sessions are available in-person in Walnut Creek, CA and
                   remotely worldwide.
