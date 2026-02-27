@@ -100,14 +100,15 @@ export default function BookingPage() {
               <div className="mx-auto max-w-2xl text-center">
                 <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20">
                   <Sparkles className="h-4 w-4" />
-                  Book a Session
+                  Energy Healing &amp; Space Clearing
                 </div>
                 <h1 className="mt-6 font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-foreground text-balance">
-                  Request Your Healing Session
+                  Book Your Healing Session
                 </h1>
                 <p className="mt-6 text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                  Share a few details about what you&apos;re looking for, and I will follow up to confirm your time
-                  and answer any questions. Sessions are available in-person in Walnut Creek, CA and remotely.
+                  Share a few details about the support you&apos;re looking for, and I will follow up personally to
+                  confirm your time and answer any questions. Sessions are available in-person in Walnut Creek, CA and
+                  remotely worldwide.
                 </p>
               </div>
             </BlurIn>
@@ -122,8 +123,8 @@ export default function BookingPage() {
                 <div className="rounded-2xl border border-border bg-card p-6 sm:p-8 shadow-sm">
                   <h2 className="font-serif text-xl sm:text-2xl font-semibold text-foreground">Booking Details</h2>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    I will review your request personally and add it to my calendar. You&apos;ll receive a follow-up
-                    email to confirm your appointment and share next steps.
+                    I will review your request and add it to my calendar if the time works. You&apos;ll receive a
+                    follow-up email to confirm your appointment and share any preparation tips.
                   </p>
 
                   {isSubmitted ? (
@@ -292,7 +293,10 @@ export default function BookingPage() {
                       </div>
 
                       {error && (
-                        <p className="text-sm text-red-500 bg-red-50 border border-red-100 rounded-xl px-3 py-2">
+                        <p
+                          className="text-sm text-red-600 bg-red-50 border border-red-100 rounded-xl px-3 py-2"
+                          aria-live="polite"
+                        >
                           {error}
                         </p>
                       )}
