@@ -77,10 +77,10 @@ export default function AboutPage() {
                         <Leaf className="h-10 w-10 text-primary" />
                       </div>
                       <p className="mt-5 font-serif text-2xl text-foreground">
-                        [Your Name]
+                        Sage The Space
                       </p>
                       <p className="mt-1 text-muted-foreground">
-                        Founder & Healer
+                        Energy Healing & Space Clearing
                       </p>
                       <div className="mt-4 flex justify-center gap-0.5">
                         {[...Array(5)].map((_, i) => (
@@ -88,7 +88,7 @@ export default function AboutPage() {
                         ))}
                       </div>
                       <p className="mt-1.5 text-sm text-muted-foreground">
-                        500+ sessions completed
+                        Serving clients in Walnut Creek and beyond
                       </p>
                     </div>
                   </div>
@@ -105,22 +105,23 @@ export default function AboutPage() {
               <FadeIn>
                 <div>
                   <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-foreground">
-                    My Journey
+                    My Journey into Energy Healing
                   </h2>
                   <div className="mt-6 space-y-5 text-muted-foreground leading-relaxed">
                     <p>
-                      Welcome to Sage The Space. My path to energy healing began with my own journey of transformation. 
-                      After experiencing profound shifts through energy work during a particularly challenging time, 
-                      I felt called to share these gifts with others.
+                      Welcome to Sage The Space. My path to energy healing began with my own journey of transformation 
+                      here in the East Bay. After experiencing profound shifts through energy work during a particularly 
+                      challenging time, I felt called to share these gifts with others.
                     </p>
                     <p>
                       I trained extensively in Reiki, chakra healing, and various space clearing techniques to bring you 
                       a comprehensive approach to wellness. My practice combines ancient wisdom with intuitive guidance, 
-                      creating a unique and deeply personal experience for each client.
+                      creating a unique and deeply personal experience for each client&mdash;whether we meet in person 
+                      in Walnut Creek or connect remotely.
                     </p>
                     <p>
                       I believe that everyone has the capacity for healing and growth. My role is simply to facilitate 
-                      that process - creating a safe, nurturing space where you can release what no longer serves you 
+                      that process&mdash;creating a safe, nurturing space where you can release what no longer serves you 
                       and embrace the energy of renewal.
                     </p>
                   </div>

@@ -25,12 +25,6 @@ const contactInfo = [
     href: "mailto:hello@sagethespace.com",
   },
   {
-    icon: Phone,
-    label: "Phone",
-    value: "(925) 555-1234",
-    href: "tel:+19255551234",
-  },
-  {
     icon: Clock,
     label: "Hours",
     value: "By Appointment",

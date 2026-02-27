@@ -75,17 +75,17 @@ export default function HomePage() {
 
               <BlurIn delay={100}>
                 <h1 className="mt-8 font-serif text-5xl font-semibold tracking-tight text-foreground sm:text-6xl lg:text-7xl leading-[1.1]">
-                  <span className="text-balance">Transform Your</span>
+                  <span className="text-balance">Energy Healing &amp; Space Clearing</span>
                   <span className="block mt-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                    Energy & Space
+                    in Walnut Creek, CA
                   </span>
                 </h1>
               </BlurIn>
 
               <BlurIn delay={200}>
                 <p className="mt-8 text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto text-pretty">
-                  Experience the power of holistic healing. Release what no longer serves you 
-                  and embrace a life of balance, clarity, and renewed vitality.
+                  Experience the power of holistic healing in Walnut Creek and the greater East Bay. 
+                  Release what no longer serves you and embrace a life of balance, clarity, and renewed vitality&mdash;in person or from anywhere through remote sessions.
                 </p>
               </BlurIn>
 

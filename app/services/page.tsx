@@ -104,13 +104,13 @@ export default function ServicesPage() {
             <BlurIn>
               <div className="mx-auto max-w-2xl text-center">
                 <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20">
-                  Healing Services
+                  Energy Healing &amp; Space Clearing
                 </div>
                 <h1 className="mt-6 font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-foreground text-balance">
-                  Find Your Path to Wellness
+                  Healing Services in Walnut Creek, CA
                 </h1>
                 <p className="mt-6 text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                  Each service is designed to support your unique journey toward balance, clarity, and renewal.
+                  Each service is designed to support your unique journey toward balance, clarity, and renewal&mdash;whether you visit in person in Walnut Creek or join remotely from anywhere.
                 </p>
               </div>
             </BlurIn>
