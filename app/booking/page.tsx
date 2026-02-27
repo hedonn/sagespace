@@ -349,15 +349,30 @@ export default function BookingPage() {
                   </div>
 
                   <div className="rounded-2xl border border-border bg-card p-6 space-y-4 text-sm text-muted-foreground">
-                    <h3 className="font-serif text-base font-semibold text-foreground">Location & Hours</h3>
+                    <h3 className="font-serif text-base font-semibold text-foreground">Location & Business Hours</h3>
                     <div>
                       <p className="font-medium text-foreground">Sage The Space</p>
                       <p>Walnut Creek, CA</p>
                       <p className="mt-1">Sessions available in-person and remotely worldwide.</p>
                     </div>
-                    <div className="pt-2 border-t border-border/60">
+                    <div className="pt-2 border-t border-border/60 space-y-1">
                       <p className="font-medium text-foreground">Business Hours</p>
-                      <p>Monday – Saturday · By appointment</p>
+                      <div className="grid grid-cols-[auto,1fr] gap-x-4 gap-y-1">
+                        <span className="text-foreground">Sunday</span>
+                        <span>Closed</span>
+                        <span className="text-foreground">Monday</span>
+                        <span>Closed</span>
+                        <span className="text-foreground">Tuesday</span>
+                        <span>9:30 AM – 4:00 PM</span>
+                        <span className="text-foreground">Wednesday</span>
+                        <span>9:30 AM – 4:00 PM</span>
+                        <span className="text-foreground">Thursday</span>
+                        <span>9:30 AM – 4:00 PM</span>
+                        <span className="text-foreground">Friday</span>
+                        <span>9:30 AM – 4:00 PM</span>
+                        <span className="text-foreground">Saturday</span>
+                        <span>9:00 AM – 2:00 PM</span>
+                      </div>
                     </div>
                   </div>
 
