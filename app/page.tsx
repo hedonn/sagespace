@@ -109,8 +109,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground/60">
+          {/* Scroll indicator - hidden on small screens to avoid overlap */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex md:flex-col items-center gap-2 text-muted-foreground/60">
             <span className="text-xs uppercase tracking-[0.2em]">Scroll</span>
             <div className="w-px h-10 bg-gradient-to-b from-muted-foreground/40 to-transparent" />
           </div>
