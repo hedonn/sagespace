@@ -12,10 +12,15 @@ import { FadeIn, BlurIn } from "@/components/animations"
 import { Calendar, Clock, Sparkles, ArrowRight, CheckCircle2 } from "lucide-react"
 
 const serviceOptions = [
-  { value: "reiki", label: "Energy Healing / Reiki" },
-  { value: "space-clearing", label: "Space Clearing" },
-  { value: "wellness", label: "Wellness Consultation / Coaching" },
-  { value: "other", label: "Other / Not Sure" },
+  { value: "reiki-session", label: "Reiki Session – 60 min · $85" },
+  { value: "distance-reiki", label: "Distance Reiki – 45 min · $70" },
+  { value: "chakra-balancing", label: "Chakra Balancing – 75 min · $95" },
+  { value: "home-space-clearing", label: "Home Space Clearing – 90–120 min · from $150" },
+  { value: "office-space-clearing", label: "Office Space Clearing – 60–90 min · from $175" },
+  { value: "new-home-blessing", label: "New Home Blessing – 60 min · $125" },
+  { value: "initial-consultation", label: "Initial Consultation – 30 min · Free" },
+  { value: "wellness-coaching", label: "Wellness Coaching – 60 min · $75" },
+  { value: "other", label: "Other / Not sure yet" },
 ]
 
 const initialState = {
