@@ -386,28 +386,28 @@ export default function BookingPage() {
         <section id="location-hours" className="py-12 lg:py-16 border-t border-border bg-muted/40">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <FadeIn>
-              <div className="grid gap-8 lg:grid-cols-2 items-start">
-                <div className="space-y-3">
-                  <p className="text-sm font-semibold uppercase tracking-[0.15em] text-primary">
+              <div className="grid gap-10 lg:grid-cols-2 items-start">
+                <div className="space-y-4 text-center lg:text-left">
+                  <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] text-primary">
                     Visit or meet remotely
                   </p>
                   <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-foreground">
                     Location &amp; Business Hours
                   </h2>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0">
                     Sessions are offered in a calm, private space in Walnut Creek, CA, as well as remotely for clients
                     around the world. After you request a booking, I&apos;ll confirm your time based on the hours below.
                   </p>
-                  <div className="mt-4 rounded-2xl border border-border bg-card p-4 text-sm text-muted-foreground space-y-1.5">
+                  <div className="mt-2 rounded-2xl border border-border bg-card p-4 text-sm text-muted-foreground space-y-1.5">
                     <p className="font-medium text-foreground">Sage The Space</p>
                     <p>Walnut Creek, CA</p>
                     <p>In-person and distance sessions available.</p>
                   </div>
                 </div>
                 <div>
-                  <div className="rounded-2xl border border-border bg-card p-5 text-sm text-muted-foreground">
-                    <p className="font-medium text-foreground mb-3">Business Hours</p>
-                    <div className="grid grid-cols-[auto,1fr] gap-x-4 gap-y-1.5">
+                  <div className="rounded-2xl border border-border bg-card p-4 sm:p-5 text-sm text-muted-foreground">
+                    <p className="font-medium text-foreground mb-3 text-center sm:text-left">Business Hours</p>
+                    <div className="grid grid-cols-[auto,1fr] gap-x-4 gap-y-1.25">
                       <span className="text-foreground">Sunday</span>
                       <span>Closed</span>
                       <span className="text-foreground">Monday</span>
